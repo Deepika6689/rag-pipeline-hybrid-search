@@ -1,10 +1,3 @@
-"""
-Phase 5.2: Query dashboard. Ask questions, see the answer with
-citations, retrieved chunks ranked by relevance, confidence breakdown,
-and a toggle to compare hybrid vs. dense-only retrieval side by side.
-
-Run with: streamlit run frontend/dashboard.py
-"""
 import os
 import sys
 import streamlit as st
