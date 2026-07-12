@@ -1,14 +1,3 @@
-"""
-Phase 1.2: Configurable chunking strategies.
-
-Three switchable strategies, as the guide specifies:
-  - fixed:      fixed-size window with overlap (baseline)
-  - recursive:  structure-aware split on section headings, then by size
-  - semantic:   splits on topic boundaries using embedding similarity
-
-Each chunk records which strategy produced it, so the eval framework
-(Phase 4) can compare strategies head-to-head with real numbers.
-"""
 from dataclasses import dataclass
 from typing import List, Optional
 
