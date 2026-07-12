@@ -77,6 +77,25 @@ cp .env.example .env
 # edit .env and add your free Groq key from https://console.groq.com
 ```
 
+### `requirements.txt`
+
+```
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+groq>=1.5.0
+sentence-transformers==3.1.1
+chromadb>=1.5.9
+rank-bm25==0.2.2
+pypdf==5.0.1
+python-dotenv==1.0.1
+markdown-it-py==3.0.0
+beautifulsoup4==4.12.3
+numpy==1.26.4
+streamlit==1.38.0
+requests==2.32.3
+```
+
 ## Quickstart
 
 ```bash
@@ -93,6 +112,43 @@ streamlit run frontend/dashboard.py
 Then open `http://localhost:8501` and ask something like:
 *"What's the rate limit for a read-write API key, and how does that compare
 to admin keys?"*
+
+## Sample output
+
+**Query:** *"If a production deployment causes a SEV-1 incident, what's the
+process end-to-end — from rollback to postmortem?"*
+
+This question can't be answered from a single document — it requires pulling
+the rollback command from `deployment_guide.md` and the incident-response
+process from `incident_response.md`, then merging both into one coherent
+answer. Hybrid retrieval + fusion + reranking pulled 5 chunks across both
+files; the model generated an answer with an inline citation on every claim;
+the citation verifier checked each one against its source chunk.
+
+> If a production deployment causes a SEV-1 incident, the process would
+> involve running `./scripts/rollback.sh <previous_version_tag>` to revert
+> the Kubernetes deployment to the previous image and roll back any
+> accompanying database migrations that were marked reversible [1]. The
+> incident would be classified as SEV-1, requiring immediate paging of the
+> on-call engineer and notification of the incident commander within 5
+> minutes [3]. An Incident Commander (IC) would be appointed to coordinate
+> the response... After the incident, a written postmortem would be
+> required within 3 business days [2].
+>
+> Note that the context does not explicitly state who performs the rollback
+> or how the IC is selected, only that the IC is not necessarily the person
+> fixing the issue [5].
+
+| Retrieval confidence | Citation accuracy | Completeness | Composite |
+|---|---|---|---|
+| 40% | 100% | 100% | 70% |
+
+Every citation was independently verified as supported by its source chunk.
+Retrieval confidence sits at 40% rather than near-100% by design — only 2 of
+the 5 retrieved chunks scored positively with the cross-encoder (the rest
+were pulled in by fusion but judged weakly relevant), and the confidence
+metric reports that honestly instead of letting one strong match inflate the
+whole score.
 
 ## API
 
