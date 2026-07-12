@@ -115,7 +115,7 @@ Then open `http://localhost:8501` and ask something like:
 to admin keys?"*
 
 ## Sample output
-<img width="1907" height="921" alt="image" src="https://github.com/user-attachments/assets/09514100-a24d-4269-9ad4-d9d7c403b149" />
+<img width="1907" height="913" alt="image" src="https://github.com/user-attachments/assets/4cc8698e-a307-46c9-8d2d-082e3d7f23ac" />
 <img width="1908" height="917" alt="image" src="https://github.com/user-attachments/assets/52f67b57-0006-4330-945c-e58ee0b1cb6d" />
 <img width="1907" height="916" alt="image" src="https://github.com/user-attachments/assets/1186beb0-09d6-48b4-aebe-cfa91e8c4c7e" />
 
