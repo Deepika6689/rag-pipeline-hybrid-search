@@ -1,11 +1,3 @@
-"""
-Local, free embeddings via sentence-transformers. No API cost, no
-vendor lock-in, no rate limits during indexing — a deliberate deviation
-from the guide's OpenAI suggestion, and a good interview talking point
-("I kept embeddings local so ingestion cost is zero and I'm not
-bottlenecked by an external rate limit when re-indexing thousands of
-chunks").
-"""
 from functools import lru_cache
 from typing import List
 import numpy as np
