@@ -1,8 +1,3 @@
-"""
-Phase 3.2: Citation verification — the quality layer most RAG systems
-skip. For every [n] citation in the answer, check whether the sentence
-it's attached to is actually supported by that context chunk.
-"""
 import re
 import json
 from typing import List
