@@ -1,8 +1,3 @@
-"""
-Central config for the RAG pipeline.
-All tunables live here so they're easy to point to in an interview
-("here's where I made retrieval weighting configurable").
-"""
 import os
 from dotenv import load_dotenv
 
