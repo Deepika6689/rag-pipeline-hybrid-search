@@ -115,10 +115,9 @@ Then open `http://localhost:8501` and ask something like:
 to admin keys?"*
 
 ## Sample output
-<img width="1325" height="866" alt="image" src="https://github.com/user-attachments/assets/d96376ab-77e4-4d21-9a11-4ef6636013eb" />
-<img width="978" height="940" alt="image" src="https://github.com/user-attachments/assets/7a736321-dab1-402e-9a19-7eb30ebd1b09" />
-<img width="988" height="241" alt="image" src="https://github.com/user-attachments/assets/a982d431-40a0-4371-82f7-a00d32ace04c" />
-
+<img width="1907" height="921" alt="image" src="https://github.com/user-attachments/assets/09514100-a24d-4269-9ad4-d9d7c403b149" />
+<img width="1908" height="917" alt="image" src="https://github.com/user-attachments/assets/52f67b57-0006-4330-945c-e58ee0b1cb6d" />
+<img width="1907" height="916" alt="image" src="https://github.com/user-attachments/assets/1186beb0-09d6-48b4-aebe-cfa91e8c4c7e" />
 
 **Query:** *"If a production deployment causes a SEV-1 incident, what's the
 process end-to-end — from rollback to postmortem?"*
