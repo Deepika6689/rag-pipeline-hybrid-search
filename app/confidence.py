@@ -1,9 +1,3 @@
-"""
-Phase 3.3 + 3.4: Composite confidence score + graceful "I don't know"
-handling. If confidence is too low, the API returns a structured
-"couldn't fully answer" response instead of letting the model hallucinate
-past thin retrieval.
-"""
 from typing import List
 from app import config
 
