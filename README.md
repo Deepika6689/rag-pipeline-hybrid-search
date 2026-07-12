@@ -1,3 +1,4 @@
+
 # RAG Pipeline with Hybrid Search Over Internal Docs
 
 A production-shaped Retrieval-Augmented Generation system: it ingests internal
@@ -114,6 +115,10 @@ Then open `http://localhost:8501` and ask something like:
 to admin keys?"*
 
 ## Sample output
+<img width="1325" height="866" alt="image" src="https://github.com/user-attachments/assets/d96376ab-77e4-4d21-9a11-4ef6636013eb" />
+<img width="978" height="940" alt="image" src="https://github.com/user-attachments/assets/7a736321-dab1-402e-9a19-7eb30ebd1b09" />
+<img width="988" height="241" alt="image" src="https://github.com/user-attachments/assets/a982d431-40a0-4371-82f7-a00d32ace04c" />
+
 
 **Query:** *"If a production deployment causes a SEV-1 incident, what's the
 process end-to-end — from rollback to postmortem?"*
