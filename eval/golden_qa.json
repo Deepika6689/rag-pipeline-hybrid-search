@@ -1,0 +1,72 @@
+[
+  {
+    "id": "qa-001",
+    "question": "What header is used to authenticate API requests?",
+    "expected_answer": "The X-API-Key header, containing the issued API key.",
+    "type": "lookup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "qa-002",
+    "question": "How many requests per minute can a read-write API key make?",
+    "expected_answer": "300 requests per minute.",
+    "type": "lookup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "qa-003",
+    "question": "How long after generation does an API key expire, and what should you do before that happens?",
+    "expected_answer": "API keys expire after 90 days; you should rotate the key before expiry since there is no grace period.",
+    "type": "lookup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "qa-004",
+    "question": "If an incident escalates from on-call and also requires a written postmortem, what are the acknowledgment time and the postmortem deadline?",
+    "expected_answer": "On-call must acknowledge within 5 minutes; the postmortem is due within 3 business days.",
+    "type": "multi-hop",
+    "difficulty": "medium"
+  },
+  {
+    "id": "qa-005",
+    "question": "Compare the rate limits across all three API key permission levels.",
+    "expected_answer": "Read-only: 1000/min, read-write: 300/min, admin: 100/min.",
+    "type": "multi-hop",
+    "difficulty": "medium"
+  },
+  {
+    "id": "qa-006",
+    "question": "What's the maximum number of production replicas allowed for autoscaling, and how does that compare to staging?",
+    "expected_answer": "Production allows up to 20 replicas; staging is capped at 3.",
+    "type": "multi-hop",
+    "difficulty": "medium"
+  },
+  {
+    "id": "qa-007",
+    "question": "Who is allowed to write code during a SEV-1 incident: the Incident Commander or the responder fixing the issue?",
+    "expected_answer": "The Incident Commander does not write code; that's done by the engineer(s) fixing the issue, not the IC.",
+    "type": "lookup",
+    "difficulty": "medium"
+  },
+  {
+    "id": "qa-008",
+    "question": "What is the refund policy for annual subscriptions?",
+    "expected_answer": "Not answerable from the provided corpus — no document covers billing or refunds.",
+    "type": "no-answer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "qa-009",
+    "question": "thing about the key expiry email warning",
+    "expected_answer": "A warning email is sent 7 days before an API key expires.",
+    "type": "ambiguous",
+    "difficulty": "hard"
+  },
+  {
+    "id": "qa-010",
+    "question": "What happens if a deployment migration isn't reversible and something needs to roll back?",
+    "expected_answer": "Non-reversible migrations require manual intervention; check the migration file for an '# irreversible' comment before assuming rollback is safe.",
+    "type": "lookup",
+    "difficulty": "medium"
+  }
+]
