@@ -1,8 +1,3 @@
-"""
-Phase 3.1: Grounded generation. The model may only answer from the
-retrieved context, must cite chunks inline as [1], [2]..., and must say
-explicitly when the context doesn't have enough information.
-"""
 from typing import List
 from app.llm_client import chat
 
