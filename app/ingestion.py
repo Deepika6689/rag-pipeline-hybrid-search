@@ -1,9 +1,3 @@
-"""
-Phase 1.1: Multi-format document loader.
-Normalizes markdown / text / HTML / PDF into clean plaintext + metadata,
-and keeps raw + processed versions on disk so re-indexing never requires
-re-uploading source files.
-"""
 import os
 import json
 import hashlib
